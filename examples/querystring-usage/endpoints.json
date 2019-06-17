@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "name": "Querystring usage",
+  "endpoints": [
+    {
+      "path": "/api/aggregate/:accountId",
+      "method": "GET",
+      "querystring": [ "videoId" ],
+      "backends": [
+        {
+          "key": "videos",
+          "host": "http://www.mocky.io",
+          "path": "/v2/:videoId",
+          "method": "GET"
+        },
+        {
+          "key": "account",
+          "host": "http://www.mocky.io",
+          "path": "/v2/:accountId",
+          "method": "GET"
+        },
+        {
+          "key": "permissions",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffad193200000d00eac8bd",
+          "querystring": [ "accountId" ],
+          "method": "GET"
+        }
+      ],
+      "response": {
+        "root": [ "$account", "$videos", "$permissions" ]
+      }
+    }
+  ]
+}

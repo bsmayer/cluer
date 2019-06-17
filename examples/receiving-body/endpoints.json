@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "Receiving Body",
+  "endpoints": [
+    {
+      "path": "/api/aggregate",
+      "method": "POST",
+      "backends": [
+        {
+          "key": "videos",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffad0c3200003800eac8bc",
+          "method": "POST",
+          "body": "$body.account"
+        },
+        {
+          "key": "account",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffacfa3200006000eac8ba",
+          "method": "GET"
+        }
+      ],
+      "response": {
+        "root": [ "$account", "$videos" ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "name": "Error Handling",
+  "endpoints": [
+    {
+      "path": "/api/aggregate",
+      "method": "GET",
+      "lifecycleHandlers": "./examples/error-handling/handlers.js",
+      "backends": [
+        {
+          "key": "videos",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffad0c3200003800eac8bc",
+          "method": "GET"
+        },
+        {
+          "key": "account",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffacfa3200006000eac8ba",
+          "method": "GET"
+        },
+        {
+          "key": "content",
+          "host": "http://mocky.io",
+          "path": "/v2/5d00c5d73200004f00f9d798",
+          "method": "GET"
+        }
+      ],
+      "response": {
+        "root": [ "$account", "$videos" ]
+      }
+    }
+  ]
+}

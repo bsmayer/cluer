@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "Advanced lifecycle use",
+  "endpoints": [
+    {
+      "path": "/api/aggregate",
+      "method": "GET",
+      "lifecycleHandlers": "./examples/advanced-lifecycle/handlers.js",
+      "backends": [
+        {
+          "key": "videos",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffad0c3200003800eac8bc",
+          "method": "GET"
+        },
+        {
+          "key": "account",
+          "host": "http://www.mocky.io",
+          "path": "/v2/5cffacfa3200006000eac8ba",
+          "method": "GET"
+        }
+      ],
+      "response": {
+        "root": [ "$account", "$videos" ]
+      }
+    }
+  ]
+}
