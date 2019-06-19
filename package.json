@@ -1,8 +1,12 @@
 {
   "name": "cluer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Be simple, but dynamic! Cluer is an api aggregator with a low learning curve!",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsmayer/cluer"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
