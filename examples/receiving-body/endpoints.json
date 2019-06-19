@@ -9,7 +9,7 @@
         {
           "key": "videos",
           "host": "http://www.mocky.io",
-          "path": "/v2/5cffad0c3200003800eac8bc",
+          "path": "/v2/5d077bd0300000a1530520e6",
           "method": "POST",
           "body": "$body.account"
         },

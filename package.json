@@ -1,12 +1,12 @@
 {
   "name": "cluer",
-  "version": "0.0.1-SNAPSHOT",
-  "description": "Simple and dynamic api aggregator",
+  "version": "0.0.2",
+  "description": "Be simple, but dynamic! Cluer is an api aggregator with a low learning curve!",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Bruno Mayer <bs.mayer@hotmail.com>",
   "license": "ISC",
   "dependencies": {
     "JSONPath": "^0.11.2",

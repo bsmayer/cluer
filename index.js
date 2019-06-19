@@ -12,6 +12,7 @@ function init(routes, options) {
 	const { port } = options;
 	const { endpoints, name } = routes;
 	const app = express();
+
 	app.use(bodyParser.json());
 
 	endpoints.forEach(endpoint => {
